@@ -1,0 +1,90 @@
+Intro to Data Security 
+
+//video 1
+Não se trata de tutorial de código
+Trata-se de ferramentas, métodos e recursos que irão servir para começar
+a sua própria pesquisa e implementação em qualquer linguagem.
+Existem diversos attack vectors 
+
+-Hashing to keep secrets from everyone and to verify content.
+-Encryption to keep sensitive data locked away from unauthorized eyes.
+-Identifying and validating users.
+-What data you should not store.
+
+Saber onde você vai ser atacado é importante e será seu primeiro passo para garantir a segurança da informação.
+
+Tudo aquilo que pode ser usado para atacar um sistema, eventualmente será usado. Por isso seja paranóico e preveja essas falhas para se precaver.
+
+
+//video 2 
+Esse curso assume que a segurança física da informação está sob os cuidados de uma equipe externa.
+O nosso foco será proteger o acesso à nossas informações.
+
+Tradicionalmente, seu objetivo será proteger os dados de serem lidos por olhos não autorizados.
+Exemplos de criptografias são a Cifra de César e a alemã Enigma.
+
+Lembre-se de que tudo que um ser humano pode codificar com papel e caneta, poderá ser decodificado também.
+
+Antes só as grandes organizações e governos tinham conhecimento sobre a criptografia. Mas atualmente as pessoas comuns já possuem acesso a criptografia muito robustas e a ciência da criptografia pode ser estudada e aperfeiçoada. 
+
+Risco 1: Ao colocar a criptografia em um domínio público como a Internet, os ataques contra a criptografia são mitigados. Porque? Porque a comunidade pode identificar as vulnerabilidades do algoritmo e repará-las.
+
+Risco 2: Don't create your own encryption schemes. É divertido treinar e praticar, mas o único propósito dessas práticas deverá ser o aprendizado.
+
+Risco 3: Não existe aplicação 100% segura.
+
+Quiz time! Busque responder as seguintes questões e desenhe sua estratégia de defesa.
+
+-Porque alguém iria querer ganhar acesso à sua aplicação ou seus dados?
+-Quais os caminhos mais ordinários pelos quais alguém poderia obter esse acesso?
+-Qual dado seria o mais valioso para um intruso?
+-Considerando que sua aplicação esteja comprometida, como isso iria impactar seus usuários? Como isso impactaria seu negócio?
+-Quais processos você seguiria para recuperar-se totalmente de um ataque?
+-Como alguém poderia usar sua aplicação para outros usos ilícitos?
+
+//video 3
+2 maneiras populares de obscuring e protecting data. Hashing e Encryption.
+
+Uma forma de que manter os dados armazenados com segurança é fazê-los tornarem-se incompreenssíveis e irreparáveis. (unreadable and unrecoverable)
+
+Hashing é usado em diferentes aplicações: checksums para validação de dados e outros arquivos, compressão de arquivos e autenticação de mensagens, e codificar dados de forma confiável. 
+
+Para a última, utilizamos uma função de hash e usando um ou mais algoritmos transforma os dados em uma hash. 
+
+Todo vez vai ser o mesmo hash se e somente se forem os mesmos dados na mesma função de hash. É uma função de mão única.
+
+Ah essa é uma operação irreversível. Uma vez que se transforma em hash os dados não poderão ser recuperados. E isso é ótimo, não queremos ler os dados apenas queremos verificar a integridade.
+
+Senhas: No ato de cadastro a string passa por uma função de hash onde daí o resultado é armazenado no banco de dados. No ato de login, a mesma senha passa pela função e os valores são comparados (o hash de input e o hash armazenado no banco de dados).
+
+Para evitar confusões como por exemplo, mesma senha e um usuário entra na conta do outro, existe uma característica nos bons algoritmos de hashing, conhecida como salt. 
+
+O salt é um dado único gerado aleatoriamente. Tal qual o Unix timestamp que usamos no log para sabermos quando foi feito o cadastro ou login/logout. E é adicionado na saída da função de hash, então o hash e o salt são armazenados e para validar a senha comparamos o input do usuário adicionado ao salt e checamos com o que possuímos no banco de dados.
+
+Uma colisão é uma brecha de segurança na qual diferentes valores de entrada geram o mesmo hash para uma única função de hash. MD5 é uma função de hash hoje considerado inseguro, o SHA1 também está comprometido. Algoritmos mais seguros são o SHAKE e o Argon2. 
+
+//video 4
+Resumindo de maneira simplista, encriptação é a área sa criptografia que se preocupa em tornar um dado legível em ilegível e então torná-lo legível novamente. Perceba que diferente do hash, é uma função de mão dupla.
+
+Texto pleno é.... o texto pleno né.. no caso o dado que você precisa encriptar. 
+Texto cifrado é.... o dado que por si só não apresenta sentido ou padrão algum. É a versão encriptada do texto pleno.
+Encriptação é.... o processo de transformar um texto pleno em um texto cifrado.
+Decriptação é.... o processo reverso da encriptação transformando um texto cifrado em um texto pleno.
+
+Essa ciência é bastante antiga, vamos ver os principais motivos de sua valorização e alguns métodos comuns para encriptação.
+
+Comunicação mais segura entre duas partes = tráfego web com certificados SSL/Telegram.
+
+Dica de projeto open source = https://www.projectcallisto.org/
+
+A criptografia pode se realizar de modo simétrico ou assimétrico.
+No modo simétrico, o texto pleno é codificado e decodificado utilizando-se da mesma chave. Isso significa que todo mundo da roda que precisa do dado precisará de acesso a chave, e em caso de perda é problema na certa.
+No modo assimétrico, todo mundo da roda possui duas chaves, uma é pública e a outra é privada. Assim o envio do texto cifrado é feito utilizando-se da chave pública do destinatário que poderá decriptografar o conteúdo com sua chave privada. 
+
+Embora a popularidade do método simétrico de encriptação venha diminuindo, algoritmos populares como AES, IDEA, Blowfish usam.
+
+Mas isso não significa que o método assimétrico ou que as chaves públicas são impenetráveis. Mas com toda certeza irá ser mais difícil e inviável. Tecnologias como SSL e o SSH são uma combinação de chaves pública e privada.
+
+Mantenha as chaves atualizadas e armazenadas em um lugar seguro! Mas onde?
+
+//video 5
