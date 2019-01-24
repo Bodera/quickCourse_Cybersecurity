@@ -18,9 +18,9 @@ Risco 3: Não existe aplicação 100% segura.
 
 Quiz time! Busque responder as seguintes questões e desenhe sua estratégia de defesa.
 
--Porque alguém iria querer ganhar acesso à sua aplicação ou seus dados?
--Quais os caminhos mais ordinários pelos quais alguém poderia obter esse acesso?
--Qual dado seria o mais valioso para um intruso?
--Considerando que sua aplicação esteja comprometida, como isso iria impactar seus usuários? Como isso impactaria seu negócio?
--Quais processos você seguiria para recuperar-se totalmente de um ataque?
--Como alguém poderia usar sua aplicação para outros usos ilícitos?
++ Porque alguém iria querer ganhar acesso à sua aplicação ou seus dados?
++ Quais os caminhos mais ordinários pelos quais alguém poderia obter esse acesso?
++ Qual dado seria o mais valioso para um intruso?
++ Considerando que sua aplicação esteja comprometida, como isso iria impactar seus usuários? Como isso impactaria seu negócio?
++ Quais processos você seguiria para recuperar-se totalmente de um ataque?
++ Como alguém poderia usar sua aplicação para outros usos ilícitos?

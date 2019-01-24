@@ -1,2 +1,2 @@
 # quickCourse_Cybersecurity
-Curso rápido sobre segurança da informação ministrado pelo time da Treehouse.
+Curso rápido sobre segurança da informação ministrado por Kenneth Love do time da Treehouse.
