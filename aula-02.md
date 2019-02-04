@@ -1,7 +1,5 @@
-# Video 2 
-
-Esse curso assume que a segurança física da informação está sob os cuidados de uma equipe externa.
-O nosso foco será proteger o acesso à nossas informações.  
+## Risk assessment and management
+Esse curso assume que a segurança física da informação está sob os cuidados de uma equipe externa. O nosso foco será proteger o acesso à nossas informações.  
 
 Tradicionalmente, seu objetivo será proteger os dados de serem lidos por olhos não autorizados.
 Exemplos de criptografias são a Cifra de César e a alemã Enigma.  

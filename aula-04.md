@@ -1,4 +1,4 @@
-# Video 4: 
+## Encryption
 Resumindo de maneira simplista, encriptação é a área sa criptografia que se preocupa em tornar um dado legível em ilegível e então torná-lo legível novamente. Perceba que diferente do hash, é uma função de mão dupla.
 
 Texto pleno é.... o texto pleno né.. no caso o dado que você precisa encriptar. 

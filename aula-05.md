@@ -1,4 +1,4 @@
-# Video 5
+## Storing passwords
 Nós cobrimos bastante teoria até aqui e ambientes que exigem atenção dobrada. Então devemos começar a analisar algumas soluções ou abordagens para melhorar a segurança. Perceberá se for astuto, a razão de trabalharmos em cima de aspas simples ao redor das string apresentadas nos exemplos.   
 
 ```

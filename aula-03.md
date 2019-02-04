@@ -1,5 +1,4 @@
-# Video 3
-
+## Hashing
 2 maneiras populares de obscuring e protecting data. Hashing e Encryption.
 
 Uma forma de que manter os dados armazenados com segurança é fazê-los tornarem-se incompreenssíveis e irreparáveis. (unreadable and unrecoverable)
