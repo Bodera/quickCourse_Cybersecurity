@@ -1,0 +1,21 @@
+Execute openssl under rafae/code-exercises/openssl/certs and enter the following command:
+
+Step 1: Generate a Private Key 
+openssl >genrsa -des3 -out server.key 1024 
+or
+openssl >genrsa -des3 -out server.key 2048 
+ after pressing Enter, you are asked to enter a pass phrase for the server.key.
+ 
+Step 2: Generate a CSR (Certificate Signing Request) 
+openssl >req -new -key server.key -sha256  -out server.csr
+ enter appropriate information when prompted the X.509 attributes of the certificate.
+ 
+Step 3: Generating a Self-Signed Certificate 
+ to generate a temporary certificate, which is good for 365 days, issue the following command:
+openssl >x509 -req -days 365 -in server.csr -signkey server.key -sha256 -out server.crt
+ you must enter the pass phrase for the server.key
+ 
+Step 4: Convert the CRT to PEM format 
+openssl >x509 -in server.crt -out server.pem -outform PEM
+
+Cada um desses arquivos pode ser apreciado pelo navegador Firefox.
